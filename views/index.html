@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blogpost API</title>
+    <link rel="stylesheet" type="text/css" href="../views/css/style.css"/>
+</head>
+<body>
+   <head>
+    <form action="/api/ping" method="GET">
+        <button id="button" type="submit">Ping Server</button>
+    </form>
+   </head>
+
+   <main>
+       <h1>Get Blog Post Query</h1>
+       <form action="/api/posts" method="GET">
+           
+        <div class="floatContainer">
+            <div class="floatChild">
+                <br/>
+                <label for="sort">Choose a Label to Sort By:</label>
+                <br/>
+                <select size="8" name="sortBy" id="sort">
+                    <option default value="id">JSON Id</option>
+                    <option value="likes">Number of Likes</option>
+                    <option value="popularity">Popularity Rating</option>
+                    <option value="reads">Number of Reads</option>
+                </select>
+                <br/>
+            </div>
+
+           <div class="floatChild">
+                <br/>
+                <label for="direction">Choose a direction to Sort By:</label><br/>
+                <select size="3" name="direction" id="order">
+                    <option default value="asc">Ascending Order</option>
+                    <option value="desc">Descending Order</option>
+                </select>
+                <br/>
+           </div>
+           <div class="floatChild">
+                <br/>
+                <label for="tagName">Choose Tags you're Interested In:</label><br/>
+                <select size="8" multiple name="tags" id="tagName">
+                    <option value="politics">Politics</option>
+                    <option value="health">Health</option>
+                    <option value="tech">Technology</option>
+                    <option value="history">History</option>
+                    <option value="science" default>Science</option>
+                    <option value="startups">Start-ups</option>
+                    <option value="culture">Culture</option>
+                    <option value="design">Design</option>
+                </select>
+                <br/>
+            </div>
+        </div>
+
+        <div class="floatChild">
+           <br/>
+            <button id="button" type="submit">Run Query</button>
+            <br/>
+        </div>
+       </form>
+   </main>
+
+</body>
+</html>
